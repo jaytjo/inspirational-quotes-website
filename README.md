@@ -1,13 +1,13 @@
 # Daily Inspiration
 
-A simple, lightweight website that displays a new inspirational quote each day.
+A simple, lightweight website that displays an inspirational quote of the day (by weekday) with the option to cycle through all quotes.
 
 ## Features
 
 - Single HTML file (~3KB)
 - No external dependencies
-- 25 hand-picked inspirational quotes
-- New quote rotates daily
+- 34 hand-picked inspirational quotes
+- Quote of the day (by weekday); use **Next Quote** to cycle through all
 
 ## Usage
 

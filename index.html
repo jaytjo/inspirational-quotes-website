@@ -4,17 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Daily Inspiration</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:system-ui,sans-serif;background:#0f0f0f;color:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:1rem}
+    .card{text-align:center;max-width:600px}
+    .quote{font-size:1.5rem;line-height:1.6;margin-bottom:1rem;color:#e0e0e0}
+    .author{color:#00d4ff;font-size:1.1rem}
+    .date{color:#666;margin-top:2rem;font-size:0.9rem}
+  </style>
 </head>
 <body>
-  <div class="container">
-    <div class="quote-card">
-      <p class="quote" id="quote">Loading...</p>
-      <p class="author" id="author"></p>
-    </div>
-    <p class="date" id="date"></p>
-    <a href="https://github.com/jaytjo/openclaw-test-1" class="btn" target="_blank">View Source</a>
+  <div class="card">
+    <p class="quote" id="q"></p>
+    <p class="author" id="a"></p>
+    <p class="date" id="d"></p>
   </div>
-  <script src="script.js"></script>
+  <script>
+    const q=[{t:"The only way to do great work is to love what you do.",a:"Steve Jobs"},{t:"Innovation distinguishes between a leader and a follower.",a:"Steve Jobs"},{t:"Stay hungry, stay foolish.",a:"Steve Jobs"},{t:"Life is what happens when you're busy making other plans.",a:"John Lennon"},{t:"The future belongs to those who believe in the beauty of their dreams.",a:"Eleanor Roosevelt"},{t:"It is during our darkest moments that we must focus to see the light.",a:"Aristotle"},{t:"The only impossible journey is the one you never begin.",a:"Tony Robbins"},{t:"Success is not final, failure is not fatal.",a:"Winston Churchill"},{t:"Believe you can and you're halfway there.",a:"Theodore Roosevelt"},{t:"The best time to plant a tree was 20 years ago. The second best time is now.",a:"Chinese Proverb"},{t:"Your time is limited, don't waste it living someone else's life.",a:"Steve Jobs"},{t:"In the middle of difficulty lies opportunity.",a:"Albert Einstein"},{t:"Be the change that you wish to see in the world.",a:"Mahatma Gandhi"},{t:"The mind is everything. What you think you become.",a:"Buddha"},{t:"Strive not to be a success, but rather to be of value.",a:"Albert Einstein"},{t:"The best way to predict the future is to create it.",a:"Peter Drucker"},{t:"Do what you can, with what you have, where you are.",a:"Theodore Roosevelt"},{t:"Everything you've ever wanted is on the other side of fear.",a:"George Addair"},{t:"Dream big and dare to fail.",a:"Norman Vaughan"},{t:"What lies behind us and what lies before us are tiny matters compared to what lies within us.",a:"Ralph Waldo Emerson"},{t:"Success usually comes to those who are too busy to be looking for it.",a:"Henry David Thoreau"},{t:"Don't be afraid to give up the good to go for the great.",a:"John D. Rockefeller"},{t:"I find that the harder I work, the more luck I seem to have.",a:"Thomas Jefferson"},{t:"The way to get started is to quit talking and begin doing.",a:"Walt Disney"}];
+    const i=new Date().getDay();
+    document.getElementById('q').textContent=q[i].t;
+    document.getElementById('a').textContent='— '+q[i].a;
+    document.getElementById('d').textContent=new Date().toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+  </script>
 </body>
 </html>
